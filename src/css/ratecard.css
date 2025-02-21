@@ -1,0 +1,43 @@
+.rate-card-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rate-card-container .rate-card {
+  width: 80%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid blue;
+  position: relative;
+}
+.rate-card-container .rate-card h1 {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 1rem;
+}
+.rate-card-container .rate-card label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+  margin: 1rem;
+}
+.rate-card-container .rate-card label p {
+  color: green;
+}
+.rate-card-container .rate-card i {
+  position: absolute;
+  bottom: 3rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  background: linear-gradient(
+    146deg,
+    rgba(249, 255, 0, 1) 0%,
+    rgba(255, 175, 0, 1) 35%
+  );
+  padding: 5px;
+  border-radius: 10px;
+}

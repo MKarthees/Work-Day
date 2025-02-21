@@ -1,25 +1,16 @@
-import React from 'react'
-import '../css/card.css'
+import React from "react";
+import "../css/card.css";
 
-import { FaUsersGear } from 'react-icons/fa6'
-
-const Card = () => {
+const Card = ({ title, iconName, des }) => {
   return (
     <div className="card-container">
       <div className="card">
-        <h1>Human Capital Management (HCM)</h1>
-        <i>
-          <FaUsersGear />
-        </i>
-      </div>
-      <div className="card">
-        <h1>Human Capital Management (HCM)</h1>
-        <i>
-          <FaUsersGear />
-        </i>
+        <h1>{title}</h1>
+        <i>{iconName}</i>
+        <p>{des}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

@@ -37,9 +37,18 @@
 .u-logo {
   width: 50px;
 }
-
-@media screen and (max-width: 640px) {
-  .navbar-container nav {
+.navbar-container nav i {
+  display: none;
+}
+@media screen and (max-width: 840px) {
+  .navbar-container nav ul {
     display: none;
+  }
+  .u-logo {
+    display: none;
+  }
+  .navbar-container nav i {
+    display: block;
+    font-size: 1.5rem;
   }
 }

@@ -1,15 +1,15 @@
-import React from 'react'
-import { RouterProvider } from 'react-router'
+import React from "react";
+import { RouterProvider } from "react-router";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-} from 'react-router-dom'
-import Home from './pages/Home'
-import Inbox from './pages/Inbox'
-import Payroll from './pages/Payroll'
-import TimeAbsence from './pages/TimeAbsence'
-import RouteLayout from './Router/RouteLayout'
+} from "react-router-dom";
+import Home from "./pages/Home";
+import Inbox from "./pages/Inbox";
+import Payroll from "./pages/Payroll";
+import TimeAbsence from "./pages/TimeAbsence";
+import RouteLayout from "./Router/RouteLayout";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -21,12 +21,12 @@ const App = () => {
         <Route path="time-absence" element={<TimeAbsence />} />
       </Route>
     )
-  )
+  );
   return (
     <div>
       <RouterProvider router={router} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

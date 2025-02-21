@@ -1,8 +1,9 @@
-import React from 'react'
-import logo from '../assets/images/logo.png'
-import user from '../assets/images/user.png'
-import '../css/navbar.css'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import logo from "../assets/images/logo.png";
+import user from "../assets/images/user.png";
+import "../css/navbar.css";
+import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -26,9 +27,12 @@ const Navbar = () => {
         <div className="profile">
           <img src={user} className="u-logo" alt="User Logo" />
         </div>
+        <i>
+          <FaBars />
+        </i>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
