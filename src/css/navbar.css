@@ -1,38 +1,45 @@
-.navbar-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-layer-one);
-    padding: 1rem 2rem;
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-layer-one);
+  padding: 1rem 2rem;
+}
+.navbar-container nav {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-container nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem;
+  background-color: var(--bg-layer-two);
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+}
+.navbar-container nav ul li {
+  cursor: pointer;
+}
+.navbar-container nav ul a {
+  color: var(--black);
+  text-decoration: none;
+}
+.navbar-container nav ul a.active {
+  color: var(--accent);
+}
+.c-logo {
+  width: 120px;
+}
+.u-logo {
+  width: 50px;
+}
 
-}
-.navbar-container nav{
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-
-}
-.navbar-container nav ul{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 2.5rem;
-    background-color: var(--bg-layer-two);
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-}
-.navbar-container nav ul li{
-    cursor: pointer;
-}
-.navbar-container nav ul li.active{
-    color: var(--accent);
-}
-.c-logo{
-    width: 150px;
-}
-.u-logo{
-    width: 40px;
+@media screen and (max-width: 640px) {
+  .navbar-container nav {
+    display: none;
+  }
 }
