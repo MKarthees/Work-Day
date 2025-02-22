@@ -109,7 +109,8 @@
   margin: 1rem;
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: var(--accent-two-layer-one);
+  background: linear-gradient(300deg, var(--accent-two-layer-two), #b9f6ca3b);
+
   color: var(--accent-two);
 }
 .details .two ol li p {
@@ -183,5 +184,9 @@
     width: 90%;
     line-height: 1.6;
     text-align: center;
+  }
+  .rate .rate-cards .card {
+    margin-top: 2rem;
+    gap: 4rem;
   }
 }

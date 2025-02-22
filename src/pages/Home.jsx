@@ -1,41 +1,42 @@
-import React, { useEffect, useRef } from 'react'
-import '../css/home.css'
-import banner from '../assets/images/hero.gif'
-import Card from '../components/Card.jsx'
-import getInOne from '../assets/images/1.webp'
-import getInTwo from '../assets/images/2.webp'
-import getInThree from '../assets/images/3.webp'
-import { IoMdAnalytics } from 'react-icons/io'
-import { RiMoneyRupeeCircleFill } from 'react-icons/ri'
-import { FaUsersGear } from 'react-icons/fa6'
-import { FaCalendarAlt } from 'react-icons/fa'
-import { MdOutlineMobileFriendly } from 'react-icons/md'
-import { GrShieldSecurity } from 'react-icons/gr'
-import { FaBookOpen } from 'react-icons/fa'
-import { HiLightBulb } from 'react-icons/hi'
-import { GiFlexibleStar } from 'react-icons/gi'
-import { LiaCertificateSolid } from 'react-icons/lia'
-import RateCard from '../components/RateCard.jsx'
-import starOne from '../assets/images/star-1.png'
-import starTwo from '../assets/images/star-2.png'
-import starThree from '../assets/images/star-3.png'
-import { useState } from 'react'
+import React, { useEffect, useRef } from "react";
+import "../css/home.css";
+import banner from "../assets/images/hero.gif";
+import Card from "../components/Card.jsx";
+import getInOne from "../assets/images/1.webp";
+import getInTwo from "../assets/images/2.webp";
+import getInThree from "../assets/images/3.webp";
+import { IoMdAnalytics } from "react-icons/io";
+import { RiMoneyRupeeCircleFill } from "react-icons/ri";
+import { FaUsersGear } from "react-icons/fa6";
+import { FaCalendarAlt } from "react-icons/fa";
+import { MdOutlineMobileFriendly } from "react-icons/md";
+import { GrShieldSecurity } from "react-icons/gr";
+import { FaBookOpen } from "react-icons/fa";
+import { HiLightBulb } from "react-icons/hi";
+import { GiFlexibleStar } from "react-icons/gi";
+import { LiaCertificateSolid } from "react-icons/lia";
+import RateCard from "../components/RateCard.jsx";
+import starOne from "../assets/images/star-1.png";
+import starTwo from "../assets/images/star-2.png";
+import starThree from "../assets/images/star-3.png";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
-  const [slide, setSlide] = useState([getInOne, getInTwo, getInThree])
-  let [index, setIndex] = useState(0)
-  const [img, setImg] = useState()
-  const imgElement = useRef(null)
+  const [slide, setSlide] = useState([getInOne, getInTwo, getInThree]);
+  let [index, setIndex] = useState(0);
+  const [img, setImg] = useState();
+  const imgElement = useRef(null);
   useEffect(() => {
     setInterval(() => {
-      index++
+      index++;
       if (index < 3) {
-        imgElement.current = setImg(slide[index])
+        imgElement.current = setImg(slide[index]);
       } else {
-        setIndex((index = 0))
+        setIndex((index = 0));
       }
-    }, 2000)
-  }, [])
+    }, 2000);
+  }, []);
 
   return (
     <div className="home-container">
@@ -168,7 +169,9 @@ const Home = () => {
             des="Get ready for Workday certification exams with targeted training."
           />
         </div>
-        <button type="button">View More</button>
+        <NavLink to="login">
+          <button type="button">View More</button>
+        </NavLink>
       </section>
 
       <section className="rate">
@@ -197,7 +200,7 @@ const Home = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

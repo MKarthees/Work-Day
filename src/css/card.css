@@ -6,14 +6,15 @@
   align-items: center;
   gap: 1rem;
   background-color: var(--accent-layer-one);
-  filter: blur(1px);
+
+  filter: grayscale(1);
   border-radius: 1rem;
   position: relative;
   transition: 0.1s ease-in-out;
 }
 .card-container .card:hover {
   scale: 1.05;
-  filter: blur(0px);
+  filter: grayscale(0);
 }
 .card-container .card h1 {
   text-align: center;

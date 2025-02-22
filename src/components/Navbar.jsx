@@ -1,19 +1,20 @@
-import React from 'react'
-import logo from '../assets/images/logo.png'
-import user from '../assets/images/user.png'
-import '../css/navbar.css'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import logo from "../assets/images/logo.png";
+import user from "../assets/images/user.png";
+import "../css/navbar.css";
+import { NavLink } from "react-router-dom";
 
-import { FaBars, FaXmark } from 'react-icons/fa6'
-import { useRef } from 'react'
+import { FaBars, FaXmark, FaCircleUser } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
+import { useRef } from "react";
 
 const Navbar = () => {
-  const navList = useRef(null)
+  const navList = useRef(null);
   function openNav(params) {
-    console.log((navList.current.style.display = 'flex'))
+    navList.current.style.display = "flex";
   }
   function closeNav(params) {
-    console.log((navList.current.style.display = 'none'))
+    navList.current.style.display = "none";
   }
 
   return (
@@ -25,9 +26,11 @@ const Navbar = () => {
             <FaXmark />
           </i>
           <NavLink to="/">
-            <li>Home</li>
+            <li>
+              <FaHome />
+            </li>
           </NavLink>
-          <NavLink to="inbox">
+          {/* <NavLink to="inbox">
             <li>Inbox</li>
           </NavLink>
           <NavLink to="payroll">
@@ -35,17 +38,24 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="time-absence">
             <li>Time & Absence</li>
+          </NavLink> */}
+          <NavLink to="login">
+            <li>
+              <FaCircleUser />
+            </li>
           </NavLink>
         </ul>
         <div className="profile">
-          <img src={user} className="u-logo" alt="User Logo" />
+          <NavLink to="login">
+            <img src={user} className="u-logo" alt="User Logo" />
+          </NavLink>
         </div>
         <i onClick={openNav}>
           <FaBars />
         </i>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

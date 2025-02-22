@@ -13,12 +13,20 @@
   border-radius: 1rem;
   background-color: #fff9c4;
   position: relative;
+  filter: blur(4px);
+  transition: 0.2s ease-in-out;
+}
+.rate-card-container .rate-card:hover {
+  filter: blur(0px);
+  scale: 1.1;
 }
 .rate-card-container .rate-card h1 {
   text-align: center;
   font-size: clamp(1rem, 2vw, 1.2rem);
   padding: 1rem;
-  color: #f57f17;
+  background: linear-gradient(100deg, #ffbe84 10%, #f57f17 100%);
+  background-clip: text;
+  color: transparent;
 }
 .rate-card-container .rate-card .price {
   position: absolute;

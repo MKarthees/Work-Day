@@ -10,6 +10,7 @@ import Inbox from "./pages/Inbox";
 import Payroll from "./pages/Payroll";
 import TimeAbsence from "./pages/TimeAbsence";
 import RouteLayout from "./Router/RouteLayout";
+import Login from "./pages/Login";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="inbox" element={<Inbox />} />
         <Route path="payroll" element={<Payroll />} />
         <Route path="time-absence" element={<TimeAbsence />} />
+        <Route path="login" element={<Login />} />
       </Route>
     )
   );

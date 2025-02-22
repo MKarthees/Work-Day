@@ -20,11 +20,15 @@
   list-style: none;
   gap: 2.5rem;
   background-color: var(--bg-layer-two);
-  padding: 1rem 3rem;
+  padding: 0.5rem 2rem;
   border-radius: 3rem;
+}
+.navbar-container nav ul i {
+  font-size: 1rem;
 }
 .navbar-container nav ul li {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 .navbar-container nav ul a {
   color: var(--black);
@@ -47,9 +51,9 @@
     display: none;
     flex-direction: column;
     gap: 3rem;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     left: 0;
     top: 0;
     border-radius: 0px;
