@@ -76,11 +76,7 @@ const Home = () => {
           iconName={<FaCalendarAlt />}
           des="Predictive analytics, workforce modeling, and scenario planning."
         />
-        <Card
-          title="Mobile and Self-Service Features"
-          iconName={<MdOutlineMobileFriendly />}
-          des="Mobile access and self-service portals for employees."
-        />
+
         <Card
           title="Security and Data Privacy"
           iconName={<GrShieldSecurity />}
