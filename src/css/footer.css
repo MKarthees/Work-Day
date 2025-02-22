@@ -30,12 +30,46 @@
   flex: 1;
   text-align: center;
 }
-.footer-container .contact .footer-container .follow {
+
+.footer-container .contact ul li {
+  margin: 1rem;
+}
+.footer-container .follow {
   flex: 1;
   text-align: center;
+  gap: 1rem;
+  transition: 0.1s all ease-in-out;
+}
+.footer-container .follow ul .face:hover {
+  color: blue;
+}
+.footer-container .follow ul .insta:hover {
+  color: palevioletred;
+}
+.footer-container .follow ul .linkedin:hover {
+  color: blue;
+}
+.footer-container .follow ul .gmail:hover {
+  color: orange;
+}
+.footer-container .follow ul i {
+  font-size: clamp(1.5rem, 4vw, 0.8rem);
+  margin: 1rem;
 }
 .footer-container .quick-links {
   flex: 1;
+  text-align: center;
+}
+.footer-container .quick-links ul li {
+  margin: 1rem;
+}
+.footer span {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+.footer p {
+  margin: 1rem;
   text-align: center;
 }
 @media screen and (max-width: 840px) {

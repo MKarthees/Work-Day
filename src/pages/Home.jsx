@@ -1,21 +1,42 @@
-import React from "react";
-import "../css/home.css";
-import banner from "../assets/images/hero.gif";
-import Card from "../components/Card.jsx";
-import { IoMdAnalytics } from "react-icons/io";
-import { RiMoneyRupeeCircleFill } from "react-icons/ri";
-import { FaUsersGear } from "react-icons/fa6";
-import { FaCalendarAlt } from "react-icons/fa";
-import { MdOutlineMobileFriendly } from "react-icons/md";
-import { GrShieldSecurity } from "react-icons/gr";
-import { FaBookOpen } from "react-icons/fa";
-import { HiLightBulb } from "react-icons/hi";
-import { GiFlexibleStar } from "react-icons/gi";
-import { LiaCertificateSolid } from "react-icons/lia";
-import RateCard from "../components/RateCard.jsx";
-import { FaStar } from "react-icons/fa6";
+import React, { useEffect, useRef } from 'react'
+import '../css/home.css'
+import banner from '../assets/images/hero.gif'
+import Card from '../components/Card.jsx'
+import getInOne from '../assets/images/1.webp'
+import getInTwo from '../assets/images/2.webp'
+import getInThree from '../assets/images/3.webp'
+import { IoMdAnalytics } from 'react-icons/io'
+import { RiMoneyRupeeCircleFill } from 'react-icons/ri'
+import { FaUsersGear } from 'react-icons/fa6'
+import { FaCalendarAlt } from 'react-icons/fa'
+import { MdOutlineMobileFriendly } from 'react-icons/md'
+import { GrShieldSecurity } from 'react-icons/gr'
+import { FaBookOpen } from 'react-icons/fa'
+import { HiLightBulb } from 'react-icons/hi'
+import { GiFlexibleStar } from 'react-icons/gi'
+import { LiaCertificateSolid } from 'react-icons/lia'
+import RateCard from '../components/RateCard.jsx'
+import starOne from '../assets/images/star-1.png'
+import starTwo from '../assets/images/star-2.png'
+import starThree from '../assets/images/star-3.png'
+import { useState } from 'react'
 
 const Home = () => {
+  const [slide, setSlide] = useState([getInOne, getInTwo, getInThree])
+  let [index, setIndex] = useState(0)
+  const [img, setImg] = useState()
+  const imgElement = useRef(null)
+  useEffect(() => {
+    setInterval(() => {
+      index++
+      if (index < 3) {
+        imgElement.current = setImg(slide[index])
+      } else {
+        setIndex((index = 0))
+      }
+    }, 2000)
+  }, [])
+
   return (
     <div className="home-container">
       <section className="hero">
@@ -56,11 +77,6 @@ const Home = () => {
           des="Predictive analytics, workforce modeling, and scenario planning."
         />
         <Card
-          title="Payroll and Benefits Management"
-          iconName={<IoMdAnalytics />}
-          des="Automated payroll processing and benefits management."
-        />
-        <Card
           title="Mobile and Self-Service Features"
           iconName={<MdOutlineMobileFriendly />}
           des="Mobile access and self-service portals for employees."
@@ -87,7 +103,7 @@ const Home = () => {
             </p>
           </div>
           <div className="right">
-            <img src={banner} alt="" />
+            <img ref={imgElement} src={img} alt="" />
           </div>
         </div>
         <div className="two">
@@ -167,28 +183,25 @@ const Home = () => {
               title="Workday Fundamentals (Beginner)"
               day="2"
               price="₹500"
-              icon={<FaStar />}
-              color="red"
+              star={starOne}
             />
             <RateCard
               title="Workday Human Resources (Intermediate)"
               day="4"
               price="₹1000"
-              icon={<FaStar />}
-              color="yellow"
+              star={starTwo}
             />
             <RateCard
               title="Workday Reporting & Analytics (Advanced)"
               day="3"
               price="₹2000"
-              icon={<FaStar />}
-              color="green"
+              star={starThree}
             />
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

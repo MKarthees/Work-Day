@@ -19,3 +19,12 @@ import { GrShieldSecurity } from 'react-icons/gr'
       <i>
         <GrShieldSecurity />
       </i>
+        function slider(params) {
+          if (index < 2) {
+            setIndex((index += 1))
+          } else {
+            setIndex(0)
+          }
+          console.log(index)
+        }
+        useEffect(setInterval(slider, 5000), [index])

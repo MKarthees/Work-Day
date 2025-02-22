@@ -9,8 +9,13 @@
   --bg-color: #ffffff;
   --bg-layer-one: #f0f0f0;
   --bg-layer-two: #e1e1e1;
-  --accent: #5388e0;
-  --accent-layer-one: #e2e5ed;
-  --accent-layer-two: #d5d8df;
+  --accent: #b71c1c;
+  --accent-layer-one: #ffcdd2;
+  --accent-layer-two: #ef9a9a;
+  --accent-two: #00c853;
+  --accent-two-layer-one: #b9f6ca;
+  --accent-two-layer-two: #69f0ae;
+  --border: #ff0000;
   --black: #000;
+  --white: #fff;
 }

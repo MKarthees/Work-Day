@@ -44,6 +44,9 @@
   .navbar-container nav ul {
     display: none;
   }
+  .c-logo {
+    width: 80px;
+  }
   .u-logo {
     display: none;
   }

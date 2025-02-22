@@ -1,9 +1,9 @@
-import React from "react";
-import "../css/footer.css";
-import { FaFacebook } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { FiLinkedin } from "react-icons/fi";
-import { SiGmail } from "react-icons/si";
+import React from 'react'
+import '../css/footer.css'
+import { FaFacebook } from 'react-icons/fa'
+import { AiFillInstagram } from 'react-icons/ai'
+import { FiLinkedin } from 'react-icons/fi'
+import { SiGmail } from 'react-icons/si'
 const Footer = () => {
   return (
     <div className="footer">
@@ -12,30 +12,34 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <ul>
             <li>
-              Address: 1st Floor, Venkadachalapathy Complex, NH 7, Kooraikundu -
-              626002
+              <span>Address:</span> 1st Floor, Venkadachalapathy Complex, NH 7,
+              Kooraikundu - 626002
             </li>
-            <li>Phone: +91 89258 31828</li>
-            <li>Email: enquiry@getintech.in</li>
             <li>
-              Website:
-              <a href="https://www.getintech.in/">Getin Technologies</a>
+              <span>Phone:</span> +91 89258 31828
+            </li>
+            <li>
+              <span>Email:</span> enquiry@getintech.in
+            </li>
+            <li>
+              <span>Website:</span>
+              <a href="https://www.getintech.in/"> Getin Technologies</a>
             </li>
           </ul>
         </div>
         <div className="follow">
           <h4>Follow Us</h4>
           <ul>
-            <i>
+            <i className="face">
               <FaFacebook />
             </i>
-            <i>
+            <i className="insta">
               <AiFillInstagram />
             </i>
-            <i>
+            <i className="linkedin">
               <FiLinkedin />
             </i>
-            <i>
+            <i className="gmail">
               <SiGmail />
             </i>
           </ul>
@@ -55,7 +59,7 @@ const Footer = () => {
         reserved.
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
