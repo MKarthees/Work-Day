@@ -1,20 +1,20 @@
-import React from "react";
-import logo from "../assets/images/logo.png";
-import user from "../assets/images/user.png";
-import "../css/navbar.css";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import logo from '../assets/images/logo.png'
+import user from '../assets/images/user.png'
+import '../css/navbar.css'
+import { NavLink } from 'react-router-dom'
 
-import { FaBars, FaXmark, FaCircleUser } from "react-icons/fa6";
-import { FaHome } from "react-icons/fa";
-import { useRef } from "react";
+import { FaBars, FaXmark, FaCircleUser } from 'react-icons/fa6'
+import { FaHome } from 'react-icons/fa'
+import { useRef } from 'react'
 
 const Navbar = () => {
-  const navList = useRef(null);
+  const navList = useRef(null)
   function openNav(params) {
-    navList.current.style.display = "flex";
+    navList.current.style.display = 'flex'
   }
   function closeNav(params) {
-    navList.current.style.display = "none";
+    navList.current.style.display = 'none'
   }
 
   return (
@@ -38,16 +38,18 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="time-absence">
             <li>Time & Absence</li>
-          </NavLink> */}
+          </NavLink>
           <NavLink to="login">
             <li>
               <FaCircleUser />
             </li>
-          </NavLink>
+          </NavLink> */}
         </ul>
         <div className="profile">
           <NavLink to="login">
-            <img src={user} className="u-logo" alt="User Logo" />
+            <li className="u-logo" alt="User Logo">
+              <FaCircleUser />
+            </li>
           </NavLink>
         </div>
         <i onClick={openNav}>
@@ -55,7 +57,7 @@ const Navbar = () => {
         </i>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

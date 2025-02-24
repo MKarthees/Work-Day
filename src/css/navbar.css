@@ -37,11 +37,18 @@
 .navbar-container nav ul a.active {
   color: var(--accent);
 }
+
 .c-logo {
   width: 120px;
 }
 .u-logo {
-  width: 50px;
+  font-size: 2.5rem;
+  list-style: none;
+  filter: grayscale(1);
+}
+.profile a.active li {
+  filter: grayscale(0);
+  color: var(--login-accent);
 }
 .navbar-container nav i {
   display: none;
